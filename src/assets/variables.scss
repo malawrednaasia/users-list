@@ -1,0 +1,38 @@
+$color-grey: #ececec;
+$color-white: #ffffff;
+$color-blue: #009df7;
+$color-yellow: #e9b709;
+$color-green: #26b077;
+$color-navy-blue: #072c46;
+$color-dark-grey: #dcdcdc;
+
+$font: 'Arial';
+
+$fs-1: 2rem;
+$fs-2: 1.3rem;
+$fs-3: 1.1rem;
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin header-font {
+  color: $color-white;
+  font-family: $font;
+  font-weight: bold;
+  font-size: $fs-1;
+}
+
+@mixin name-font {
+  color: $color-navy-blue;
+  font-weight: bold;
+  font-size: $fs-2;
+  margin-left: 1.5rem;
+}
+
+@mixin horizontal-centered {
+  display: flex;
+  display: -ms-flex;
+  align-self: center;
+}

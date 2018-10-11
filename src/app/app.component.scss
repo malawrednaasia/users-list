@@ -1,0 +1,120 @@
+@import "../assets/variables";
+
+.background {
+  @include reset;
+  @include horizontal-centered;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: $color-grey;
+}
+
+.container {
+  @include horizontal-centered;
+  flex-direction: column;
+  width: 870px;
+  margin: 0 auto;
+  box-shadow: 15px 15px 20px $color-dark-grey;
+}
+
+.users {
+  @include reset;
+  background-color: $color-white;
+  list-style-type: none;
+}
+
+.header {
+  background-color: $color-blue;
+  border-bottom: $color-green solid 2px;
+  padding: 1.5rem;
+  @include header-font;
+}
+
+.user {
+  @include horizontal-centered;
+  justify-content: space-between;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  font-family: $font;
+  border-top: $color-grey solid 1px;
+
+  &--group {
+    display: flex;
+    display: -ms-flex;
+    justify-content: space-between;
+  }
+
+  &:first-child {
+    border-top: none;
+    margin-top: 1.5rem;
+  }
+
+  &:last-child {
+    margin-bottom: 1.5rem;
+  }
+
+  &__avatar {
+    @include horizontal-centered;
+    border-radius: 30%;
+    margin: 1.7rem 0;
+    height: 5rem;
+  }
+
+  &__name {
+    @include horizontal-centered;
+    @include name-font;
+  }
+
+  &__id {
+    @include horizontal-centered;
+    opacity: 0.8;
+    color: $color-navy-blue;
+    font-size: $fs-3;
+  }
+
+  &__details {
+    @include reset;
+    @include horizontal-centered;
+    border: none;
+    background: none;
+    color: $color-green;
+    margin-left: 2rem;
+    font-size: $fs-3;
+
+    &--down {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      color: $color-green;
+    }
+  }
+
+  &__add {
+    @include reset;
+    @include horizontal-centered;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: $color-yellow;
+    color: $color-white;
+    font-weight: bold;
+    font-size: $fs-3;
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .user {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__add {
+      margin-bottom: 1rem;
+    }
+  }
+}
